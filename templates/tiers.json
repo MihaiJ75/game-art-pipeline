@@ -1,0 +1,25 @@
+{
+  "_comment": [
+    "Milestone work orders and generation tiers.",
+    "Prompts live in specs/art-prompts.md and nowhere else."
+  ],
+  "style_reference": "art-source/reference/master_style_reference.png",
+  "tiers": {
+    "t0-style": {
+      "name": "Master Style Reference",
+      "gate": "Required before generating any downstream assets.",
+      "blocks_everything": true,
+      "assets": [
+        "art-source/reference/master_style_reference.png"
+      ]
+    },
+    "t1-prototype": {
+      "name": "Core Prototype Assets",
+      "gate": "Core player character and main environment.",
+      "assets": [
+        "res://assets/sprites/player/hero.png",
+        "res://assets/sprites/environment/ground.png"
+      ]
+    }
+  }
+}

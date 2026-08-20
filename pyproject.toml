@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "game-art-pipeline"
+version = "1.0.0"
+description = "Agentic 2D Game Art Pipeline & Computer Vision QA Engine for Godot, Unity, and Indie Game Devs"
+readme = "README.md"
+authors = [{ name = "Mihai J." }]
+license = { text = "MIT" }
+keywords = [
+    "gamedev",
+    "game-art",
+    "godot",
+    "unity",
+    "sprites",
+    "computer-vision",
+    "ai-art",
+    "claude-code",
+    "gemini",
+    "texture-generator",
+    "pixel-art",
+    "qa-automation"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Topic :: Games/Entertainment",
+    "Topic :: Multimedia :: Graphics",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+dependencies = [
+    "Pillow>=10.0.0",
+    "numpy>=1.24.0"
+]
+
+[project.scripts]
+art-pack = "art_pack:main"
+art-qa = "art_qa:main"

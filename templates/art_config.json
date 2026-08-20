@@ -1,0 +1,34 @@
+{
+  "project_name": "GENERIC_GAME",
+  "paths": {
+    "spec_markdown": "specs/art-prompts.md",
+    "tiers_json": "art-source/tiers.json",
+    "ledger_json": "art-source/ledger.json",
+    "style_reference": "art-source/reference/master_style_reference.png",
+    "assets_root": "assets/sprites",
+    "qa_html_report": "art-source/qa_report.html",
+    "qa_markdown_report": "art-source/qa_report.md"
+  },
+  "rules": {
+    "target_resolution": [
+      1024,
+      1024
+    ],
+    "gameplay_resolution": [
+      48,
+      48
+    ],
+    "chroma_backdrop_hex": "#FF00FF",
+    "chroma_tolerance": 35,
+    "defringe": true,
+    "pass_score_threshold": 85.0,
+    "framing_fill_target": 0.8,
+    "framing_fill_tolerance": 0.12,
+    "unsharp_mask": {
+      "radius": 1.5,
+      "percent": 180,
+      "threshold": 3
+    }
+  },
+  "export_engine": "godot"
+}
