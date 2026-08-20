@@ -1,14 +1,26 @@
 # 🎨 Game Art Pipeline & Computer Vision QA Engine
 
 [![CI](https://github.com/MihaiJ75/game-art-pipeline/actions/workflows/ci.yml/badge.svg)](https://github.com/MihaiJ75/game-art-pipeline/actions/workflows/ci.yml)
+[![AI: Google Gemini 3.7](https://img.shields.io/badge/Optimized%20for-Google%20Gemini%203.7%20Flash%20Image-4285F4?logo=google&logoColor=white)](https://ai.google.dev/)
+[![AI: Claude Code](https://img.shields.io/badge/Orchestrated%20with-Claude%20Code%20%7C%20Antigravity-7B2CBF)](https://claude.ai)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Engine: Godot 4](https://img.shields.io/badge/Godot-4.x-478CBF?logo=godotengine&logoColor=white)](https://godotengine.org/)
 [![Engine: Unity](https://img.shields.io/badge/Unity-2D-000000?logo=unity&logoColor=white)](https://unity.com/)
-[![AI: Claude Code & Gemini](https://img.shields.io/badge/AI-Claude%20Code%20%7C%20Gemini-7B2CBF)](https://claude.ai)
 
-> **The production-grade, zero-dependency 2D game asset engine for autonomous AI agents and technical artists.**  
-> Engineer game art specs from GDDs, orchestrate generative image models with style consistency, strip chroma backgrounds with flood-fill defringing, and validate game sprites with quantitative Computer Vision quality assurance.
+> **The production-grade 2D game asset engine specifically optimized for Google Gemini 3.7 Flash Image, Claude Code, and autonomous AI agents.**  
+> Engineer game art specs from GDDs, orchestrate generative vision models with style consistency, strip chroma backgrounds with flood-fill defringing, and validate game sprites with quantitative Computer Vision quality assurance.
+
+---
+
+## 🌟 Google Gemini 3.7 Flash Image Optimization
+
+This pipeline is engineered specifically to maximize visual fidelity and eliminate hallucinations when generating 2D game sprites with **Google Gemini 3.7**:
+
+1. **Multimodal Reference Conditioning**: Prompts are architected to attach `master_style_reference.png` directly to Gemini 3.7's visual context window, guaranteeing coherent cel-shading weight, color script adherence, and emissive lighting across the entire project.
+2. **Spatial Landmark Anchors (True North Heading)**: Enforces explicit coordinate constraints (e.g., `TOP EDGE: front nosecone`, `CENTER: cockpit`, `BOTTOM EDGE: exhaust nozzles`) preventing rotational orientation flipping.
+3. **Empty Negative Space Constraints**: Eliminates generative hallucinations (such as baked-in wheel blocks, phantom textures, or ground shadows) by forcing solid `#FF00FF` magenta chroma negative space through cutouts.
+4. **Automated Sub-Pixel Chroma Defringing**: Excises Gemini's optical bloom halos and specular edge bleeding using boundary flood-fill extraction.
 
 ---
 
@@ -78,8 +90,8 @@ python art_pack.py qa
                                │
                                ▼
 ┌─────────────────────────────────────────────────────────────┐
-│                    2. IMAGE GENERATION                      │
-│        (Gemini 3.7 / Antigravity / Midjourney / SDXL)       │
+│             2. GEMINI 3.7 IMAGE GENERATION                  │
+│       (Google Gemini 3.7 Flash Image / Gemini Vision)       │
 │   • Generates on solid #FF00FF magenta chroma               │
 │   • Conditioned on art-source/master_style_reference.png    │
 └──────────────────────────────┬──────────────────────────────┘
@@ -110,7 +122,7 @@ python art_pack.py qa
 | :--- | :--- |
 | `python art_pack.py audit` | Audit prompt specs vs milestone tiers vs disk files |
 | `python art_pack.py status` | Show roadmap milestone completion percentages |
-| `python art_pack.py order <tier\|path>` | Output exact prompts and context attachments |
+| `python art_pack.py order <tier|path>` | Output exact prompts and context attachments |
 | `python art_pack.py process <file>` | Clean alpha, excise chroma, defringe, and sharpen |
 | `python art_pack.py process <file> --seamless` | Apply 4-edge cosine cross-blending for textures |
 | `python art_pack.py test-tile <file>` | Measure seam delta & output 2x2 preview |
@@ -120,37 +132,6 @@ python art_pack.py qa
 
 ---
 
-## 📁 Repository Structure
-
-```
-├── .claude/skills/
-│   ├── game-art-spec/SKILL.md      # Skill: Prompt pack architecture
-│   └── game-art-pipeline/SKILL.md  # Skill: Execution & QA workflows
-├── engine/                         # Core Python CV Engine
-│   ├── processor.py                # Chroma & seamless processing
-│   ├── qa_evaluator.py             # 6-Metric Computer Vision QA
-│   ├── reporter.py                 # HTML dashboard & markdown reporter
-│   ├── ledger.py                   # SHA-256 prompt hashing
-│   ├── work_order.py               # Tier milestone scheduling
-│   ├── strips.py                   # Animation strip slicing
-│   ├── palette.py                  # Dynamic theme recoloring
-│   └── godot.py                    # Engine import presets & atlas packer
-├── templates/                      # Ready-to-use config & spec templates
-├── tests/                          # Automated unit test suite
-├── art_pack.py                     # Main CLI entrypoint
-├── art_qa.py                       # Standalone QA entrypoint
-├── pyproject.toml                  # Python package configuration
-└── LICENSE                         # MIT License
-```
-
----
-
 ## 📄 License
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
-
----
-
-## 🌟 Star & Support
-
-If you find this pipeline useful for your game development or AI workflows, give the repo a ⭐! Contributions and PRs are welcome.
