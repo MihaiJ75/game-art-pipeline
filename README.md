@@ -72,7 +72,7 @@ The raw generative image is passed to `art_pack.py process`:
   6. **Bilateral Symmetry & Cardinal Orientation** (IoU symmetry testing)
 - 🔁 **Seamless Tiling Synthesizer**: 4-edge cosine S-curve cross-blending producing mathematically flawless `0.00` edge seam deltas for tilemaps and textures.
 - 🎞️ **Animation Strip Slicing**: Slices sequential horizontal sprite sheets with automatic frame jitter and cross-frame bleed penalties.
-![Interactive Computer Vision QA Dashboard Preview](docs/qa_dashboard_preview.png)
+![Interactive Computer Vision QA Dashboard Preview](docs/qa_dashboard.png)
 
 - 📊 **Interactive HTML Dashboard**: Self-contained visual scoreboard with sprite previews, zoom modals, and failure recommendations.
 - 🎮 **Multi-Engine Exporters**: Auto-generates Godot 4 `.import` presets (`Nearest, Mipmaps OFF` / `Linear, Repeat`) and Unity `.meta` settings.
