@@ -10,6 +10,8 @@ readme = "README.md"
 authors = [{ name = "Mihai J." }]
 license = { text = "MIT" }
 keywords = [
+    "nanobana",
+    "nanobanana",
     "gamedev",
     "game-art",
     "godot",
